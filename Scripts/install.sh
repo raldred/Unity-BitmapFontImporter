@@ -2,6 +2,8 @@
 # exit this script if any commmand fails
 set -e
 
+echo $(pwd)
+
 echo "Get Unity version for $UNITY_VERSION"
 url=$(python unitydownloadurl.py $UNITY_VERSION)
 realVersion=${url/*Unity-/}
