@@ -2,10 +2,10 @@
 # exit this script if any commmand fails
 set -e
 
-echo $(pwd)
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "Get Unity version for $UNITY_VERSION"
-url=$(python unitydownloadurl.py $UNITY_VERSION)
+url=$(python $DIR/unitydownloadurl.py $UNITY_VERSION)
 realVersion=${url/*Unity-/}
 realVersion=${realVersion/.pkg*/}
 echo "Got Unity version:$realVersion"
