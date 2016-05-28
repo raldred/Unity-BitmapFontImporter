@@ -5,7 +5,7 @@ set -e
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "Get Unity version for $UNITY_VERSION"
-url=$(python $DIR/unitydownloadurl.py $UNITY_VERSION)
+url=$(python $DIR/unitydownloadurl.py -v $UNITY_VERSION --os mac)
 realVersion=${url/*Unity-/}
 realVersion=${realVersion/.pkg*/}
 echo "Got Unity version:$realVersion"
