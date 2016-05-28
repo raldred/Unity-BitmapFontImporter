@@ -7,7 +7,7 @@ rvm:
 
 env:
   matrix:
-    - UNITY_VERSION=bata
+    - UNITY_VERSION=beta
     - UNITY_VERSION=last
     - UNITY_VERSION=5.3
     - UNITY_VERSION=5.2
